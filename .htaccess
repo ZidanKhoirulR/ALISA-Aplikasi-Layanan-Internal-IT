@@ -1,0 +1,18 @@
+Options -Indexes
+RewriteEngine On
+# RewriteBase /
+
+# Arahkan semua request (kecuali file/folder yang ada) ke index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Keamanan: blokir akses ke file sensitif
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "\.(sql|cfg|ini|log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

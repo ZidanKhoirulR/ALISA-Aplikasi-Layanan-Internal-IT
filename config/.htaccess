@@ -1,0 +1,9 @@
+# Prevent direct access to configuration and SQL files
+<FilesMatch "\.(php|sql|json|env|example)$">
+    Deny from all
+</FilesMatch>
+
+# Explicitly deny .env and .htaccess
+RewriteEngine On
+RewriteRule ^\.env$ - [F,L]
+RewriteRule ^\.htaccess$ - [F,L]

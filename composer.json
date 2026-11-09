@@ -1,0 +1,22 @@
+{
+  "name": "selulosa/alisa",
+  "description": "ALISA — Aplikasi Layanan Internal IT Selulosa",
+  "type": "project",
+  "require": {
+    "php": ">=7.2",
+    "bcosca/fatfree-core": "^3.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.2.33"
+    },
+    "platform-check": false,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}

@@ -1,0 +1,67 @@
+# ============================================
+# ALISA - Git Ignore Configuration
+# Security & Secret Protection (.gitignore)
+# ============================================
+
+# Environment & Sensitive Credentials
+.env
+.env.*
+!.env.example
+
+# Composer Dependencies
+vendor/
+composer.phar
+
+# Runtime Temporary Files, Cache & Sessions
+tmp/sessions/*
+!tmp/sessions/.gitkeep
+tmp/uploads/*
+!tmp/uploads/.gitkeep
+
+# Storage & Uploads
+storage/uploads/*
+!storage/uploads/.gitkeep
+!storage/uploads/.htaccess
+public/uploads/*
+!public/uploads/.gitkeep
+!public/uploads/.htaccess
+public/category-icons/*
+!public/category-icons/.gitkeep
+!public/category-icons/.htaccess
+
+# Node / Scratch Tools
+node_modules/
+scratch/
+scratch_*.php
+screenshots/
+router.php
+
+# Logs & Dumps & Databases
+*.log
+*.dump
+*.sql
+*.sql.bak
+error_log
+
+# Archives & Backups
+*.rar
+*.zip
+*.7z
+*.tar.gz
+*.bak
+alisa.rar
+
+# Development Debug & Test Scripts
+check_*.php
+!check_db.php
+debug_*.php
+test_*.php
+read_error_log.php
+
+# OS & IDE Cache
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
